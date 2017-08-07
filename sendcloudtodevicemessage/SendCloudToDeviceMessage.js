@@ -28,7 +28,7 @@ serviceClient.open(function (err) {
   } else {
     console.log('Service client connected');
     serviceClient.getFeedbackReceiver(receiveFeedback);
-    var message = new Message('{"Command":"Ping", "Team":"Team01", "Parameters":"yo yo yo"}');
+    var message = new Message('{"Command":"Brew", "Team":"Team01", "Parameters":""}');
     message.ack = 'full';
     message.messageId = "My Message ID";
     console.log('Sending message: ' + message.getData());
