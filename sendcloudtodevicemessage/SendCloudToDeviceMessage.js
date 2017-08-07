@@ -3,8 +3,8 @@
 var Client = require('azure-iothub').Client;
 var Message = require('azure-iot-common').Message;
 
-var connectionString = 'HostName=pulcher.azure-devices.net;SharedAccessKeyName=service;SharedAccessKey=IXkhQZRYAbo/dUEdnjLZrwTSD1LP/wsOs3s81Y7aZn0=';
-var targetDevice = 'myFirstNodeDevice';
+var connectionString = 'HostName=marsiotdfw.azure-devices.net;SharedAccessKeyName=coffeeclient;SharedAccessKey=rwKwYhCLhsuB1L6Hs8STUVf/EuSPBPQWmN5SjKGWvkg=';
+var targetDevice = 'coffeepot';
 
 var serviceClient = Client.fromConnectionString(connectionString);
 
@@ -28,7 +28,7 @@ serviceClient.open(function (err) {
   } else {
     console.log('Service client connected');
     serviceClient.getFeedbackReceiver(receiveFeedback);
-    var message = new Message('Cloud to device message.');
+    var message = new Message('{"Command":"Ping", "Team":"Team01", "Parameters":"yo yo yo"}');
     message.ack = 'full';
     message.messageId = "My Message ID";
     console.log('Sending message: ' + message.getData());

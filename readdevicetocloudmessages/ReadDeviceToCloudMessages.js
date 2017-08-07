@@ -2,7 +2,7 @@
 
 var EventHubClient = require('azure-event-hubs').Client;
 
-var connectionString = 'HostName=pulcher.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=3XFxFitmMLMFCCmr0MfQYfsQ1L2C3GtGSAXbM0wC6Bc=';
+var connectionString = 'HostName=marsiotdfw.azure-devices.net;SharedAccessKeyName=coffeeclient;SharedAccessKey=rwKwYhCLhsuB1L6Hs8STUVf/EuSPBPQWmN5SjKGWvkg=';
 
 var printError = function (err) {
   console.log(err.message);
@@ -19,7 +19,7 @@ client.open()
     .then(client.getPartitionIds.bind(client))
     .then(function (partitionIds) {
         return partitionIds.map(function (partitionId) {
-            return client.createReceiver('$Default', partitionId, { 'startAfterTime' : Date.now()}).then(function(receiver) {
+            return client.createReceiver('Team01', partitionId, { 'startAfterTime' : Date.now()}).then(function(receiver) {
                 console.log('Created partition receiver: ' + partitionId)
                 receiver.on('errorReceived', printError);
                 receiver.on('message', printMessage);
