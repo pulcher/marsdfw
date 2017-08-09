@@ -10,7 +10,7 @@ namespace SendCloudToDevice
     class Program
     {
         static ServiceClient serviceClient;
-        static string connectionString = "HostName=pulcher.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=3XFxFitmMLMFCCmr0MfQYfsQ1L2C3GtGSAXbM0wC6Bc=";
+        static string connectionString = "HostName=marsiotdfw.azure-devices.net;SharedAccessKeyName=coffeeclient;SharedAccessKey=rwKwYhCLhsuB1L6Hs8STUVf/EuSPBPQWmN5SjKGWvkg=";
 
         static void Main(string[] args)
         {
@@ -27,9 +27,9 @@ namespace SendCloudToDevice
 
         private async static Task SendCloudToDeviceMessageAsync()
         {
-            var commandMessage = new Message(Encoding.ASCII.GetBytes("Cloud to device message."));
+            var commandMessage = new Message(Encoding.ASCII.GetBytes("{\"Command\":\"Ping\",\"Team\":\"Team01\",\"Parameters\":\"YO YO YO\"}"));
             commandMessage.Ack = DeliveryAcknowledgement.Full;
-            await serviceClient.SendAsync("myFirstDevice", commandMessage);
+            await serviceClient.SendAsync("coffeepot", commandMessage);
         }
 
         private async static void ReceiveFeedbackAsync()
