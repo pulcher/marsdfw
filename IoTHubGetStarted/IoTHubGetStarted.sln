@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateDeviceIdentity", "CreateDeviceIdentity\CreateDeviceIdentity.csproj", "{E25D7FEF-9AAC-4EF9-A6EF-04A481E6AA7C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadDevicetoCloudMessages", "ReadDevicetoCloudMessages\ReadDevicetoCloudMessages.csproj", "{C1C2657C-15C3-43C7-BEBA-B6B504B1D8A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulatedDevice", "SimulatedDevice\SimulatedDevice.csproj", "{0A9A8A92-5C7B-4BF6-B434-B64CC59F0E87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +23,15 @@ Global
 		{C1C2657C-15C3-43C7-BEBA-B6B504B1D8A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1C2657C-15C3-43C7-BEBA-B6B504B1D8A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1C2657C-15C3-43C7-BEBA-B6B504B1D8A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A9A8A92-5C7B-4BF6-B434-B64CC59F0E87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A9A8A92-5C7B-4BF6-B434-B64CC59F0E87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A9A8A92-5C7B-4BF6-B434-B64CC59F0E87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A9A8A92-5C7B-4BF6-B434-B64CC59F0E87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8
 	EndGlobalSection
 EndGlobal
