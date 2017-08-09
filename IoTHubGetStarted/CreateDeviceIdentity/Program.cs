@@ -12,7 +12,7 @@ namespace CreateDeviceIdentity
     {
         // PVPGJJyvZHwJiznDD+K/TxmaXNk5npGAdpnQh86AUm8=
         static RegistryManager registryManager;
-        static string connectionString = "HostName=pulcher.azure-devices.net;SharedAccessKeyName=registryReadWrite;SharedAccessKey=4upUUaMzdla7EG744vw2fe2xurCSENnI7wuorE3Ob8Y=";
+        static string connectionString = "<iothub connection string>";
 
         static void Main(string[] args)
         {
