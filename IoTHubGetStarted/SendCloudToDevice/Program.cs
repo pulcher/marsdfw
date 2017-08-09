@@ -27,7 +27,7 @@ namespace SendCloudToDevice
 
         private async static Task SendCloudToDeviceMessageAsync()
         {
-            var commandMessage = new Message(Encoding.ASCII.GetBytes("{\"Command\":\"Ping\",\"Team\":\"Team01\",\"Parameters\":\"YO YO YO\"}"));
+            var commandMessage = new Message(Encoding.ASCII.GetBytes("{\"Command\":\"Brew\",\"Team\":\"Team01\",\"Parameters\":\"YO YO YO\"}"));
             commandMessage.Ack = DeliveryAcknowledgement.Full;
             await serviceClient.SendAsync("coffeepot", commandMessage);
         }
