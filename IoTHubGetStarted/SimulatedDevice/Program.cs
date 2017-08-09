@@ -11,8 +11,8 @@ namespace SimulatedDevice
     class Program
     {
         static DeviceClient deviceClient;
-        static string iotHubUri = "<hostname>";
-        static string deviceKey = "<devicekey>";
+        static string iotHubUri = "pulcher.azure-devices.net";
+        static string deviceKey = "PVPGJJyvZHwJiznDD+K/TxmaXNk5npGAdpnQh86AUm8=";
 
         static void Main(string[] args)
         {
@@ -20,7 +20,24 @@ namespace SimulatedDevice
             deviceClient = DeviceClient.Create(iotHubUri, new DeviceAuthenticationWithRegistrySymmetricKey("myFirstDevice", deviceKey), TransportType.Mqtt);
 
             SendDeviceToCloudMessagesAsync();
+            ReceiveC2dAsync();
             Console.ReadLine();
+        }
+
+        private static async void ReceiveC2dAsync()
+        {
+            Console.WriteLine("\nReceiving cloud to device messages from service");
+            while (true)
+            {
+                Message receivedMessage = await deviceClient.ReceiveAsync();
+                if (receivedMessage == null) continue;
+
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Received message: {0}", Encoding.ASCII.GetString(receivedMessage.GetBytes()));
+                Console.ResetColor();
+
+                await deviceClient.CompleteAsync(receivedMessage);
+            }
         }
 
         private static async void SendDeviceToCloudMessagesAsync()

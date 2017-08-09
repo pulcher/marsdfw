@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadDevicetoCloudMessages",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulatedDevice", "SimulatedDevice\SimulatedDevice.csproj", "{0A9A8A92-5C7B-4BF6-B434-B64CC59F0E87}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendCloudToDevice", "SendCloudToDevice\SendCloudToDevice.csproj", "{AB497E6B-E010-4918-94A6-D3402F057E2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0A9A8A92-5C7B-4BF6-B434-B64CC59F0E87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A9A8A92-5C7B-4BF6-B434-B64CC59F0E87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A9A8A92-5C7B-4BF6-B434-B64CC59F0E87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB497E6B-E010-4918-94A6-D3402F057E2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB497E6B-E010-4918-94A6-D3402F057E2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB497E6B-E010-4918-94A6-D3402F057E2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB497E6B-E010-4918-94A6-D3402F057E2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
