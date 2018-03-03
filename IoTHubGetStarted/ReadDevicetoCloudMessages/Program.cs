@@ -1,16 +1,15 @@
-﻿using System;
+﻿using Microsoft.ServiceBus.Messaging;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using Microsoft.ServiceBus.Messaging;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace ReadDevicetoCloudMessages
 {
     class Program
     {
-        static string connectionString = "HostName=pulcher.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=3XFxFitmMLMFCCmr0MfQYfsQ1L2C3GtGSAXbM0wC6Bc=";
+        static string connectionString = "HostName=marstest.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=6nF0ZikGJ0lXBDswcwiuTwghrU6Z8crH62jWfdyJxBw=";
         static string iotHubD2cEndpoint = "messages/events";
         static EventHubClient eventHubClient;
 

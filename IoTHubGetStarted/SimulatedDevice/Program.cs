@@ -11,8 +11,8 @@ namespace SimulatedDevice
     class Program
     {
         static DeviceClient deviceClient;
-        static string iotHubUri = "pulcher.azure-devices.net";
-        static string deviceKey = "PVPGJJyvZHwJiznDD+K/TxmaXNk5npGAdpnQh86AUm8=";
+        static string iotHubUri = "marstest.azure-devices.net";
+        static string deviceKey = "Kfc9CTluCIvQ8CvMBh6aPge4iwSXa/Mjn6S21voF/dI=";
 
         static void Main(string[] args)
         {
