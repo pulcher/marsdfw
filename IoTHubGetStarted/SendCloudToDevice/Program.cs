@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.Azure.Devices;
+using System;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Azure.Devices;
 
 namespace SendCloudToDevice
 {
     class Program
     {
         static ServiceClient serviceClient;
-        static string connectionString = "HostName=pulcher.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=3XFxFitmMLMFCCmr0MfQYfsQ1L2C3GtGSAXbM0wC6Bc=";
+        static string connectionString = "HostName=marstest.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=6nF0ZikGJ0lXBDswcwiuTwghrU6Z8crH62jWfdyJxBw=";
 
         static void Main(string[] args)
         {
