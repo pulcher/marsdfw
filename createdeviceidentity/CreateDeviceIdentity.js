@@ -2,7 +2,7 @@
 
 var iothub = require('azure-iothub');
 
-var connectionString = 'HostName=pulcher.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=3XFxFitmMLMFCCmr0MfQYfsQ1L2C3GtGSAXbM0wC6Bc=';
+var connectionString = 'HostName=marstest.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=6nF0ZikGJ0lXBDswcwiuTwghrU6Z8crH62jWfdyJxBw=';
 
 var registry = iothub.Registry.fromConnectionString(connectionString);
 

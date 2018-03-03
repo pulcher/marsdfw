@@ -3,8 +3,8 @@
 var Client = require('azure-iothub').Client;
 var Message = require('azure-iot-common').Message;
 
-var connectionString = 'HostName=marsiotdfw.azure-devices.net;SharedAccessKeyName=coffeeclient;SharedAccessKey=rwKwYhCLhsuB1L6Hs8STUVf/EuSPBPQWmN5SjKGWvkg=';
-var targetDevice = 'coffeepot';
+var connectionString = 'HostName=marstest.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=6nF0ZikGJ0lXBDswcwiuTwghrU6Z8crH62jWfdyJxBw=';
+var targetDevice = 'myFirstNodeDevice';
 
 var serviceClient = Client.fromConnectionString(connectionString);
 
