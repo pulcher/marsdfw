@@ -9,7 +9,7 @@ namespace CreateDeviceIdentity
     {
         // PVPGJJyvZHwJiznDD+K/TxmaXNk5npGAdpnQh86AUm8=
         static RegistryManager registryManager;
-        static string connectionString = "<iothub connection string>";
+        static string connectionString = "HostName=marstest.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=6nF0ZikGJ0lXBDswcwiuTwghrU6Z8crH62jWfdyJxBw=";
 
         static void Main(string[] args)
         {
