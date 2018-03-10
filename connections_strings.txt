@@ -2,6 +2,3 @@
 marsiotdfw IoT Hub coffeeclient connection string - Used by attendees
 --------------------------------------------------------------------------------
 HostName=marsiotdfw.azure-devices.net;SharedAccessKeyName=coffeeclient;SharedAccessKey=rwKwYhCLhsuB1L6Hs8STUVf/EuSPBPQWmN5SjKGWvkg=
-
-
-
